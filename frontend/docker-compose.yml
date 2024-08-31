@@ -1,20 +1,25 @@
-version: '3'
+version: '3.8'
 
 services:
-  app:
-    build: .
+  nox-blog-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: nox-blog-frontend
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
+    restart: always
 
   nginx:
     image: nginx:alpine
-    container_name: nginx_proxy
+    container_name: nginx
     ports:
       - "80:80"
+      - "443:443"
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx.conf:/etc/nginx/nginx.conf
     depends_on:
-      - app
+      - nox-blog-frontend
+    restart: always
