@@ -10,7 +10,7 @@ export default async function Home() {
     const data: ShortBlogCard[] = await getPosts();
 
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-3 mt-5 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
             {data.map((post, index) => (
                 <Card key={index}>
                     <Image className="rounded-t-lg h-[200px] object-cover" src={urlFor(post.image).url()} alt={post.title} width={500} height={380} />
