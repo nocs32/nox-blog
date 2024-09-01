@@ -2,6 +2,8 @@
 
 This project is a modern and responsive blog website built with cutting-edge web technologies. It provides an efficient content management system (CMS) and a sleek, customizable user interface.
 
+Website: https://blog.timnox.dev/
+
 ## 🔧 Key Features
 - CMS Integration: Powered by Sanity for a flexible and scalable content management system, allowing easy management of blog posts, categories, and metadata.
 - UI/UX: Designed with shadcn/ui and styled using Tailwind CSS to create a responsive, accessible, and visually appealing interface.
